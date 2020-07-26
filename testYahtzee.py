@@ -47,6 +47,10 @@ class Yahtzee():
 # this is our test case
 # it inherits the methods from unittest.TestCase
 # methods like assertTrue (you need self.assertTrue since it's part of the unittest.TestCase class)
+def self(args):
+    pass
+
+
 class MyTestCase(unittest.TestCase):
     def test_yahtzee(self):
         self.game = Yahtzee()  # just make sure we can create the game
@@ -77,7 +81,7 @@ class MyTestCase(unittest.TestCase):
         values = [1, 1, 1, 1, 1]
         self.assertTrue(self.game.score(values) == 50)
         values = [1, 2, 3, 4, 5]
-        self.assertTrue(self.game.score(values) != 15)
+        self.assertTrue(self.game.score(values) != sum)
 
     def sum(numbers) -> object:
         total = 0
@@ -85,7 +89,6 @@ class MyTestCase(unittest.TestCase):
             total += Die
         return total
 
-    print(sum([0, 1, 2, 3, 4, 5]))
 
 if __name__ == '__main__':
     unittest.main()
