@@ -41,13 +41,6 @@ class Yahtzee():
         self.chosen = choice  # save it into the chosen variable.
 
     def score(self, values):
-        self.game = Yahtzee()
-        values = [1, 1, 1, 1, 1]
-        self.assertTrue(self.game.score(values) == 50)
-        values = [1, 2, 3, 4, 5]
-        self.assertTrue(self.game.score(values) != 15)
-
-    def assertTrue(self, param):
         pass
 
 
@@ -86,6 +79,13 @@ class MyTestCase(unittest.TestCase):
         values = [1, 2, 3, 4, 5]
         self.assertTrue(self.game.score(values) != 15)
 
+    def sum(numbers) -> object:
+        total = 0
+        for Die in numbers:
+            total += Die
+        return total
+
+    print(sum([0, 1, 2, 3, 4, 5]))
 
 if __name__ == '__main__':
     unittest.main()
