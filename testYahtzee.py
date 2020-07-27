@@ -83,11 +83,15 @@ class MyTestCase(unittest.TestCase):
         values = [1, 2, 3, 4, 5]
         self.assertTrue(self.game.score(values) != sum)
 
-    def sum(numbers) -> object:
+    def sum(Numbers) -> object:
         total = 0
-        for Die in numbers:
+        for Die in Numbers:
             total += Die
         return total
+
+    def checkEqual(iterator):
+        return len(set(iterator)) <= 1
+
 
 
 if __name__ == '__main__':
