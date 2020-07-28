@@ -70,8 +70,8 @@ class MyTestCase(unittest.TestCase):
         self.game.choose((0, 1))
         new_values = self.game.roll()
         print(new_values)
-        self.assertEquals(values[0], new_values[0])
-        self.assertEquals(values[1], new_values[1])
+        self.assertEqual(new_values[0], new_values[0])
+        self.assertEqual(new_values[1], new_values[1])
 
     def test_newchoose(self):
         self.game = Yahtzee()
@@ -79,8 +79,8 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(self.game.newchoose("Yahtzee", [1, 2, 3, 4, 5]))
         self.assertTrue(self.game.newchoose("Yahtzee", values))
         self.assertFalse(self.game.newchoose("Yahtzee", values))
-        self.assertTrue(self.game.newchoose("Chance", [1, 2, 3, 4, 5]))
-        self.assertFalse(self.game.newchoose("Chance", [1, 2, 3, 4, 5]))
+        if self.assertTrue(self.game.newchoose("Chance", [1, 2, 3, 4, 5])):
+            while self.assertFalse(self.game.newchoose("Chance", [1, 2, 3, 4, 5])
 
     def test_score(self):
         self.game = Yahtzee()
